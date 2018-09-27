@@ -1,23 +1,28 @@
 console.log('Módulo de notas cargado')
 
-const addNote = () => {
-  console.log('Nueva nota')
-  return 'Nueva nota'
+const addNote = (title, body) => {
+  console.log(`Nueva nota con título title, y texto body`)
+  return 'Nueva nota con título title y texto body'
 }
 
-/* creo el módulo para añadir nota
-module.exports.addNote = function () {
-  console.log('Nueva nota')
-  return 'Nueva nota'
+const removeNote = (title) => {
+  console.log(`Nota con título title borrada`)
+  return `Nota title borrada `
 }
-*/
 
-const removeNote = (id) => {
-  console.log(`Nota con id ${id} borrada`)
-  return 'Nota borrada'
+const listNote = () => {
+  console.log('Listado de notas')
+  return 'Listado de notas'
+}
+
+const readNote = (title) => {
+  console.log(`Leo nota con título title`)
+  return `Leo nota con título title`
 }
 
 module.exports = {
   addNote,
-  removeNote
+  removeNote,
+  listNote,
+  readNote
 }
